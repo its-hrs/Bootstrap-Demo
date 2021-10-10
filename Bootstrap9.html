@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    
+    <title>Image Gallery</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background-color: #dddbdb;
+        }
+        img {
+            border-radius: .5em;
+            width: 100%; 
+            height: 100%;
+        }
+
+        .heading{
+            font-weight: bold;
+            text-shadow: 2px 2px black;
+            color: red;
+        }
+        
+        .text{
+            margin-left: 40%;
+            padding: 15px;
+        }
+
+        header{
+            background-color: #d4d1d1;
+        }
+         @media (min-width: 720px) {
+            .button-content div:nth-child(2) {
+                width: 500px;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-fluid text-center text-uppercase pt-5 pb-5 heading">
+            <div class="section_header mb-5 mt-4">
+                <h1>Responsive Gallery using Bootstrap</h1>
+            </div>
+        </div>
+            <div class="container-fluid pt-5 pb-5">
+            <div class="row mb-5 mt-5">
+                <div class="col-lg-6 col-md-6 col-12 mt-5">
+                    <h3>Resize the browser window to see changes</h3>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 mt-5">
+                    <h3>Click the below buttons to set number of columns</h3>
+                </div>
+            </div>
+        </div>
+        <div class=" text abt_btn text-center" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-primary" id="button1">2 - columns</button>
+            <button type="button" class="btn btn-primary" id="button2">4 - columns</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="row" id="row-container">
+            
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src ="/img/wimg5.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg5.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg5.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg5.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg7.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg7.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg7.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg7.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg8.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg8.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg8.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <img src="/img/wimg8.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+      
+    <script>
+        $(document).ready(function(){
+            $('#button1').click(function(){
+                $('#row-container > div').removeClass();
+                $('#row-container > div').addClass('col-xs-12 col-sm-6');
+                // $('#row-container > div').addClass('col-sm-6');
+            });
+
+            $('#button2').click(function(){
+                $('#row-container > div').removeClass();
+                $('#row-container > div').addClass('col-xs-6');
+                $('#row-container > div').addClass('col-sm-3');
+            });
+        });
+    </script>
+</body>
+</html>
